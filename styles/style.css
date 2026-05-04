@@ -1,0 +1,248 @@
+/* FONDO GENERAL */
+body {
+  margin: 0;
+  background: black;
+  color: #b2c6c2;
+  font-family: "Orbitron", monospace;
+
+  /* pequeño movimiento glitch */
+  animation: glitchScreen 0.2s infinite;
+}
+
+/* TEXTO GLITCH */
+h1 {
+  position: relative;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 50vh;
+  animation: flicker 2s infinite;
+}
+
+/* CAPAS RGB */
+h1::before,
+h1::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+h1::before {
+  color: #c0bfc0;
+  z-index: -1;
+  animation: glitchTop 0.3s infinite;
+}
+
+h1::after {
+  color: #878787;
+  z-index: -2;
+  animation: glitchBottom 0.3s infinite;
+}
+
+/* ANIMACIONES */
+@keyframes glitchTop {
+  0% { transform: translate(0); }
+  20% { transform: translate(-4px, -4px); }
+  40% { transform: translate(-4px, 4px); }
+  60% { transform: translate(4px, -4px); }
+  80% { transform: translate(4px, 4px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitchBottom {
+  0% { transform: translate(0); }
+  20% { transform: translate(4px, 4px); }
+  40% { transform: translate(4px, -4px); }
+  60% { transform: translate(-4px, 4px); }
+  80% { transform: translate(-4px, -4px); }
+  100% { transform: translate(0); }
+}
+
+/* PARPADEO */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+  55% { opacity: 0.3; }
+  60% { opacity: 1; }
+}
+
+/* GLITCH DE TODA LA PANTALLA */
+@keyframes glitchScreen {
+  0% { transform: translate(0); }
+  25% { transform: translate(2px, -2px); }
+  50% { transform: translate(-2px, 2px); }
+  75% { transform: translate(1px, -1px); }
+  100% { transform: translate(0); }
+}
+
+/* EFECTO VHS (LINEAS) */
+body::after {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.05) 0px,
+    rgba(255,255,255,0.05) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+}
+
+.glitch-btn {
+  margin: 40px auto;
+  display: block;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-family: "Orbitron", monospace;
+  color: #dde3e2;
+  background: transparent;
+  border: 2px solid #bdc2c1;
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  overflow: hidden;
+}
+
+/* EFECTO HOVER GLITCH */
+.glitch-btn:hover {
+  color: black;
+  background: #929494;
+  box-shadow: 0 0 10px #e2e3e3, 0 0 20px #a7a8a8;
+  animation: glitchBtn 0.2s infinite;
+}
+
+/* ANIMACIÓN */
+@keyframes glitchBtn {
+  0% { transform: translate(0); }
+  25% { transform: translate(2px, -2px); }
+  50% { transform: translate(-2px, 2px); }
+  75% { transform: translate(1px, -1px); }
+  100% { transform: translate(0); }
+}
+
+/* EFECTO EXTRA RGB */
+.glitch-btn::before,
+.glitch-btn::after {
+  content: "seguro me encuentro con alguien para parchar";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}
+
+.glitch-btn:hover::before {
+  color: #c3bec3;
+  opacity: 0.7;
+  transform: translate(-2px, -2px);
+}
+
+.glitch-btn:hover::after {
+  color: #e1e6e6;
+  opacity: 0.7;
+  transform: translate(2px, 2px);
+}
+
+.puerta {
+  display: block;
+  margin: 100px auto;
+  width: 250px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  
+  /* estilo retro */
+  filter: contrast(1.2) hue-rotate(10deg);
+}
+
+/* HOVER = "se abre" */
+.puerta:hover {
+  transform: scale(1.1) rotateY(15deg);
+  filter: brightness(1.5);
+}
+
+/* CLICK = efecto glitch rápido */
+.puerta:active {
+  animation: puertaGlitch 0.2s;
+}
+
+@keyframes puertaGlitch {
+  0% { transform: translate(0); }
+  25% { transform: translate(5px, -5px); }
+  50% { transform: translate(-5px, 5px); }
+  75% { transform: translate(3px, -3px); }
+  100% { transform: translate(0); }
+}
+
+.mensaje {
+  text-align: center;
+  margin-top: 500px;
+  font-size: 18px;
+  color: #b8ccc8;
+  font-family: "Orbitron", monospace;
+
+  /* efecto leve glitch */
+  animation: glitchText 1.5s infinite;
+}
+
+/* GLITCH SUAVE */
+@keyframes glitchText {
+  0% { text-shadow: 1px 0 red, -1px 0 blue; }
+  20% { text-shadow: -1px -1px red, 1px 1px blue; }
+  40% { text-shadow: 1px -1px red, -1px 1px blue; }
+  60% { text-shadow: -1px 1px red, 1px -1px blue; }
+  80% { text-shadow: 1px 1px red, -1px -1px blue; }
+  100% { text-shadow: 1px 0 red, -1px 0 blue; }
+}
+.glitch-btn {
+  margin: 30px auto;
+  display: block;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-family: "Orbitron", monospace;
+  color: #a5aaa9;
+  background: transparent;
+  border: 2px solid #d7d7d7;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+/* hover retro */
+.glitch-btn:hover {
+  background: #d3d3d3;
+  color: black;
+  box-shadow: 0 0 15px #e1e1e1;
+  transform: scale(1.05);
+}
+
+.tv-gif {
+  display: block !important;
+  margin-top: 80px !important;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+
+  /* look retro */
+  filter: contrast(1.3) brightness(0.9);
+
+  /* leve movimiento glitch */
+  animation: tvGlitch 0.4s infinite;
+}
+
+/* animación tipo pantalla inestable */
+@keyframes tvGlitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(2px, -1px); }
+  40% { transform: translate(-2px, 1px); }
+  60% { transform: translate(1px, 2px); }
+  80% { transform: translate(-1px, -2px); }
+  100% { transform: translate(0); }
+}
