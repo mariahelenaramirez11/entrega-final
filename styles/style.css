@@ -223,8 +223,9 @@ body::after {
 }
 
 .tv-gif {
-  display: block !important;
-  margin-top: 80px !important;
+  display: absolute;
+  top: 100px;
+  margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
   width: 300px;
@@ -244,5 +245,26 @@ body::after {
   40% { transform: translate(-2px, 1px); }
   60% { transform: translate(1px, 2px); }
   80% { transform: translate(-1px, -2px); }
+  100% { transform: translate(0); }
+}
+.clock-gif {
+  display: block;
+  margin: 8000px auto 40px auto;
+  width: 250px;
+
+  /* estilo retro */
+  filter: contrast(1.2) brightness(0.9) hue-rotate(10deg);
+
+  /* glitch leve */
+  animation: clockGlitch 0.5s infinite;
+}
+
+/* movimiento tipo señal inestable */
+@keyframes clockGlitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(2px, -2px); }
+  40% { transform: translate(-2px, 2px); }
+  60% { transform: translate(1px, 1px); }
+  80% { transform: translate(-1px, -1px); }
   100% { transform: translate(0); }
 }
