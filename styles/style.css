@@ -1,15 +1,11 @@
-/* FONDO GENERAL */
 body {
   margin: 0;
   background: black;
   color: #b2c6c2;
   font-family: "Orbitron", monospace;
-
-  /* pequeño movimiento glitch */
   animation: glitchScreen 0.2s infinite;
 }
 
-/* TEXTO GLITCH */
 h1 {
   position: relative;
   font-size: 60px;
@@ -18,7 +14,6 @@ h1 {
   animation: flicker 2s infinite;
 }
 
-/* CAPAS RGB */
 h1::before,
 h1::after {
   content: attr(data-text);
@@ -39,7 +34,6 @@ h1::after {
   animation: glitchBottom 0.3s infinite;
 }
 
-/* ANIMACIONES */
 @keyframes glitchTop {
   0% { transform: translate(0); }
   20% { transform: translate(-4px, -4px); }
@@ -58,7 +52,6 @@ h1::after {
   100% { transform: translate(0); }
 }
 
-/* PARPADEO */
 @keyframes flicker {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.7; }
@@ -66,7 +59,6 @@ h1::after {
   60% { opacity: 1; }
 }
 
-/* GLITCH DE TODA LA PANTALLA */
 @keyframes glitchScreen {
   0% { transform: translate(0); }
   25% { transform: translate(2px, -2px); }
@@ -75,7 +67,6 @@ h1::after {
   100% { transform: translate(0); }
 }
 
-/* EFECTO VHS (LINEAS) */
 body::after {
   content: "";
   position: fixed;
@@ -108,7 +99,6 @@ body::after {
   overflow: hidden;
 }
 
-/* EFECTO HOVER GLITCH */
 .glitch-btn:hover {
   color: black;
   background: #929494;
@@ -116,7 +106,6 @@ body::after {
   animation: glitchBtn 0.2s infinite;
 }
 
-/* ANIMACIÓN */
 @keyframes glitchBtn {
   0% { transform: translate(0); }
   25% { transform: translate(2px, -2px); }
@@ -124,8 +113,6 @@ body::after {
   75% { transform: translate(1px, -1px); }
   100% { transform: translate(0); }
 }
-
-/* EFECTO EXTRA RGB */
 .glitch-btn::before,
 .glitch-btn::after {
   content: "seguro me encuentro con alguien para parchar";
@@ -153,18 +140,13 @@ body::after {
   width: 250px;
   cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease;
-  
-  /* estilo retro */
   filter: contrast(1.2) hue-rotate(10deg);
 }
 
-/* HOVER = "se abre" */
 .puerta:hover {
   transform: scale(1.1) rotateY(15deg);
   filter: brightness(1.5);
 }
-
-/* CLICK = efecto glitch rápido */
 .puerta:active {
   animation: puertaGlitch 0.2s;
 }
@@ -179,16 +161,12 @@ body::after {
 
 .mensaje {
   text-align: center;
-  margin-top: 500px;
+  margin-top: 40px;
   font-size: 18px;
   color: #b8ccc8;
   font-family: "Orbitron", monospace;
-
-  /* efecto leve glitch */
   animation: glitchText 1.5s infinite;
 }
-
-/* GLITCH SUAVE */
 @keyframes glitchText {
   0% { text-shadow: 1px 0 red, -1px 0 blue; }
   20% { text-shadow: -1px -1px red, 1px 1px blue; }
@@ -213,8 +191,6 @@ body::after {
   overflow: hidden;
   transition: 0.3s;
 }
-
-/* hover retro */
 .glitch-btn:hover {
   background: #d3d3d3;
   color: black;
@@ -223,22 +199,15 @@ body::after {
 }
 
 .tv-gif {
-  display: absolute;
-  top: 100px;
-  margin-top: 80px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 300px;
-}
+  width: 200px;
 
-  /* look retro */
-  filter: contrast(1.3) brightness(0.9);
+  position: relative;
+  left: 150px;
+  top: 300px;
 
-  /* leve movimiento glitch */
   animation: tvGlitch 0.4s infinite;
 }
 
-/* animación tipo pantalla inestable */
 @keyframes tvGlitch {
   0% { transform: translate(0); }
   20% { transform: translate(2px, -1px); }
@@ -248,18 +217,18 @@ body::after {
   100% { transform: translate(0); }
 }
 .clock-gif {
-  display: block;
-  margin: 8000px auto 40px auto;
-  width: 250px;
+  width: 100px;
 
-  /* estilo retro */
+  position: relative;
+
+  top: 100px;
+  left: 300px;
+
   filter: contrast(1.2) brightness(0.9) hue-rotate(10deg);
 
-  /* glitch leve */
   animation: clockGlitch 0.5s infinite;
 }
 
-/* movimiento tipo señal inestable */
 @keyframes clockGlitch {
   0% { transform: translate(0); }
   20% { transform: translate(2px, -2px); }
@@ -267,4 +236,124 @@ body::after {
   60% { transform: translate(1px, 1px); }
   80% { transform: translate(-1px, -1px); }
   100% { transform: translate(0); }
+}
+
+/* MENSAJE GLITCH */
+.mensaje-objetos{
+  text-align:center;
+  margin-top:40px;
+
+  font-size:22px;
+  color:#c9d1cf;
+
+  font-family:"Orbitron", monospace;
+
+  animation: glitchMensaje 1s infinite;
+}
+
+/* EFECTO RGB */
+@keyframes glitchMensaje {
+
+  0%{
+    text-shadow:
+      2px 0 red,
+      -2px 0 blue;
+  }
+
+  25%{
+    text-shadow:
+      -2px -2px red,
+      2px 2px blue;
+  }
+
+  50%{
+    text-shadow:
+      2px -2px red,
+      -2px 2px blue;
+  }
+
+  75%{
+    text-shadow:
+      -2px 2px red,
+      2px -2px blue;
+  }
+
+  100%{
+    text-shadow:
+      2px 0 red,
+      -2px 0 blue;
+  }
+}
+
+
+/* BOTON NUEVO */
+.glitch-btn2{
+
+  display:block;
+
+  margin:40px auto;
+
+  padding:15px 30px;
+
+  background:transparent;
+
+  border:2px solid #cfd3d2;
+
+  color:#d7dddd;
+
+  font-family:"Orbitron", monospace;
+
+  font-size:16px;
+
+  text-transform:uppercase;
+
+  letter-spacing:2px;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+
+/* HOVER */
+.glitch-btn2:hover{
+
+  background:#d5d8d8;
+
+  color:black;
+
+  box-shadow:
+    0 0 10px #ffffff,
+    0 0 20px #c8c8c8;
+
+  animation: glitchBoton 0.2s infinite;
+}
+
+
+/* GLITCH */
+@keyframes glitchBoton {
+
+  0%{
+    transform:translate(0);
+  }
+
+  25%{
+    transform:translate(2px,-2px);
+  }
+
+  50%{
+    transform:translate(-2px,2px);
+  }
+
+  75%{
+    transform:translate(2px,2px);
+  }
+
+  100%{
+    transform:translate(0);
+  }
 }
