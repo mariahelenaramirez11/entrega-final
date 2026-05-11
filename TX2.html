@@ -18,6 +18,8 @@
     </style>
     <img src="images/tv.gif" alt="tv glitch" class="tv-gif">
     <img src="images/clock.gif" alt="clock glitch" class="clock-gif">
+    <img src="images/glitch.webp" alt="hombre glitch" class="hombre-gif">
+    <img src="images/Field-Combined-2.gif" alt="espejo glitch" class="espejo-gif">
     <p class="mensaje-objetos">
   ¿porqué se están moviendo esos objetos?
 </p>
@@ -33,6 +35,17 @@
     volver al inicio
   </button>
 </a>
+
+<audio id="bgm" loop autoplay>
+  <source src="images/aphex-twin-come-to-daddy-pappy-mix_mnzh8OUo.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  window.addEventListener('click', () => {
+    const audio = document.getElementById('bgm');
+    audio.muted = false;
+    audio.play();
+  }, { once: true });
 
 </head>
 <body>

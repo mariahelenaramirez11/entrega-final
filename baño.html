@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baño</title>
+    <style>
+        body{
+            background-image: url("images/baño.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            margin: 0;
+            min-height: 100vh;
+        }
+    </style>
+
+    <a href="backrooms.html">
+  <img src="images/puerta2.png" alt="puerta2" class="puerta2">
+  <audio id="hoverSound" src="ruido.mp3" preload="auto"></audio>
+  <a href="backrooms.html">
+  <img src="puertabaño.png" class="puerta" id="puerta">
+  <script>
+const puerta2 = document.getElementById("puerta2");
+const sonido = document.getElementById("hoverSound");
+
+puerta2.addEventListener("mouseenter", () => {
+  sonido.currentTime = 0; // reinicia el sonido
+  sonido.play();
+});
+</script>
+
+
+</a>
+</a>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -44,5 +44,15 @@
   </button>
   </a>
 
+  <audio id="bgm" loop autoplay>
+  <source src="images/tear-you-apart-she-wants-revenge_TZr7SV3f.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  window.addEventListener('click', () => {
+    const audio = document.getElementById('bgm');
+    audio.muted = false;
+    audio.play();
+  }, { once: true });
 </body>
 </html>

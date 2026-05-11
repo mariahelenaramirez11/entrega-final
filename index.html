@@ -23,6 +23,18 @@
   seguro me encuentro con alguien para parchar
 </button>
 </a>
+<audio id="bgm" loop autoplay>
+  <source src="images/Lovely day.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  window.addEventListener('click', () => {
+    const audio = document.getElementById('bgm');
+    audio.muted = false;
+    audio.play();
+  }, { once: true });
+</script>
+
 </head>
 <body>
     

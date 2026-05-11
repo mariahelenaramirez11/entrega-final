@@ -1,14 +1,14 @@
 body {
   margin: 0;
   background: black;
-  color: #b2c6c2;
+  color: #9effec;
   font-family: "Orbitron", monospace;
   animation: glitchScreen 0.2s infinite;
 }
 
 h1 {
   position: relative;
-  font-size: 60px;
+  font-size: 90px;
   text-align: center;
   margin-top: 50vh;
   animation: flicker 2s infinite;
@@ -23,13 +23,13 @@ h1::after {
 }
 
 h1::before {
-  color: #c0bfc0;
+  color: #ff9fff;
   z-index: -1;
   animation: glitchTop 0.3s infinite;
 }
 
 h1::after {
-  color: #878787;
+  color: #4ef7f7;
   z-index: -2;
   animation: glitchBottom 0.3s infinite;
 }
@@ -86,8 +86,8 @@ body::after {
 .glitch-btn {
   margin: 40px auto;
   display: block;
-  padding: 15px 30px;
-  font-size: 16px;
+  padding: 35px 50px;
+  font-size: 30px;
   font-family: "Orbitron", monospace;
   color: #dde3e2;
   background: transparent;
@@ -102,7 +102,7 @@ body::after {
 .glitch-btn:hover {
   color: black;
   background: #929494;
-  box-shadow: 0 0 10px #e2e3e3, 0 0 20px #a7a8a8;
+  box-shadow: 0 0 30px #e3f1f1, 0 0 50px #a7a8a8;
   animation: glitchBtn 0.2s infinite;
 }
 
@@ -161,8 +161,8 @@ body::after {
 
 .mensaje {
   text-align: center;
-  margin-top: 40px;
-  font-size: 18px;
+  margin-top: 180px;
+  font-size: 35px;
   color: #b8ccc8;
   font-family: "Orbitron", monospace;
   animation: glitchText 1.5s infinite;
@@ -176,10 +176,10 @@ body::after {
   100% { text-shadow: 1px 0 red, -1px 0 blue; }
 }
 .glitch-btn {
-  margin: 30px auto;
+  margin: 60px auto;
   display: block;
   padding: 15px 25px;
-  font-size: 16px;
+  font-size: 36px;
   font-family: "Orbitron", monospace;
   color: #a5aaa9;
   background: transparent;
@@ -238,12 +238,12 @@ body::after {
   100% { transform: translate(0); }
 }
 
-/* MENSAJE GLITCH */
+
 .mensaje-objetos{
   text-align:center;
   margin-top:40px;
 
-  font-size:22px;
+  font-size:45px;
   color:#c9d1cf;
 
   font-family:"Orbitron", monospace;
@@ -251,7 +251,7 @@ body::after {
   animation: glitchMensaje 1s infinite;
 }
 
-/* EFECTO RGB */
+
 @keyframes glitchMensaje {
 
   0%{
@@ -286,12 +286,12 @@ body::after {
 }
 
 
-/* BOTON NUEVO */
+
 .glitch-btn2{
 
   display:block;
 
-  margin:40px auto;
+  margin:150px auto;
 
   padding:15px 30px;
 
@@ -303,7 +303,7 @@ body::after {
 
   font-family:"Orbitron", monospace;
 
-  font-size:16px;
+  font-size:26px;
 
   text-transform:uppercase;
 
@@ -319,7 +319,7 @@ body::after {
 }
 
 
-/* HOVER */
+
 .glitch-btn2:hover{
 
   background:#d5d8d8;
@@ -334,7 +334,6 @@ body::after {
 }
 
 
-/* GLITCH */
 @keyframes glitchBoton {
 
   0%{
@@ -358,7 +357,7 @@ body::after {
   }
 }
 
-/* BOTON VOLVER */
+
 .volver-btn{
 
   position:fixed;
@@ -392,7 +391,6 @@ body::after {
 }
 
 
-/* HOVER GLITCH */
 .volver-btn:hover{
 
   background:#d9dddd;
@@ -407,7 +405,6 @@ body::after {
 }
 
 
-/* EFECTO RGB */
 .volver-btn::before,
 .volver-btn::after{
 
@@ -450,7 +447,6 @@ body::after {
 }
 
 
-/* ANIMACION */
 @keyframes volverGlitch{
 
   0%{
@@ -472,4 +468,223 @@ body::after {
   100%{
     transform:translate(0);
   }
+}
+
+.hombre-gif {
+  width: 200px;
+
+  position: relative;
+  left: 1400px;
+  top: 300px;
+
+  animation: tvGlitch 0.4s infinite;
+}
+
+@keyframes tvGlitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(2px, -1px); }
+  40% { transform: translate(-2px, 1px); }
+  60% { transform: translate(1px, 2px); }
+  80% { transform: translate(-1px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.espejo-gif {
+  width: 600px;
+
+  position: relative;
+  left: 200px;
+  top: 900px;
+
+  animation: tvGlitch 0.4s infinite;
+}
+
+@keyframes tvGlitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(2px, -1px); }
+  40% { transform: translate(-2px, 1px); }
+  60% { transform: translate(1px, 2px); }
+  80% { transform: translate(-1px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.mensaje-C{
+  text-align: center;
+  margin-top: 10px;
+
+  font-size: 55px;
+  color: #c9d1cf;
+
+  font-family: "Orbitron", monospace;
+
+  animation: glitchMensaje 1s infinite linear;
+}
+
+@keyframes glitchMensaje {
+  0%{
+    text-shadow:
+      2px 0px red,
+      -2px 0px blue;
+  }
+
+  25%{
+    text-shadow:
+      -2px -2px red,
+      2px 2px blue;
+  }
+
+  50%{
+    text-shadow:
+      2px -2px red,
+      -2px 2px blue;
+  }
+
+  75%{
+    text-shadow:
+      -2px 2px red,
+      2px -2px blue;
+  }
+
+  100%{
+    text-shadow:
+      2px 0px red,
+      -2px 0px blue;
+  }
+}
+
+.machine-gif {
+  width: 600px;
+
+  position: relative;
+
+  top: 800px;
+  left: 300px;
+
+  filter: contrast(1.2) brightness(0.9) hue-rotate(10deg);
+
+  animation: machineGlitch 0.5s infinite;
+}
+
+@keyframes machineGlitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(2px, -2px); }
+  40% { transform: translate(-2px, 2px); }
+  60% { transform: translate(1px, 1px); }
+  80% { transform: translate(-1px, -1px); }
+  100% { transform: translate(0); }
+}
+
+.mano-gif {
+  width: 600px;
+
+  position: relative;
+
+  top: 880px;
+  left: 800px;
+
+  filter: contrast(1.2) brightness(0.9) hue-rotate(10deg);
+
+  animation: manoGlitch 0.5s infinite;
+}
+
+@keyframes manoGlitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(2px, -2px); }
+  40% { transform: translate(-2px, 2px); }
+  60% { transform: translate(1px, 1px); }
+  80% { transform: translate(-1px, -1px); }
+  100% { transform: translate(0); }
+}
+
+.hombrecito-gif {
+  width: 500px;
+
+  position: relative;
+
+  top: 700px;
+  left: 800px;
+
+  filter: contrast(1.2) brightness(0.9) hue-rotate(10deg);
+
+  animation: hombrecitoGlitch 0.5s infinite;
+}
+
+@keyframes hombrecitoGlitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(2px, -2px); }
+  40% { transform: translate(-2px, 2px); }
+  60% { transform: translate(1px, 1px); }
+  80% { transform: translate(-1px, -1px); }
+  100% { transform: translate(0); }
+}
+
+.glitch-botonC{
+  text-align: center;
+  display: block;   /* clave: ya no ocupa toda la línea */
+
+  padding: 15px 30px;
+
+  background: transparent;
+  border: 2px solid #cfd3d2;
+
+  color: #d7dddd;
+  font-family: "Orbitron", monospace;
+  font-size: 26px;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+  transition: 0.3s;
+
+  position: relative;
+  overflow: hidden;
+
+  margin: 0 auto; /* elimina el espacio gigante */
+}
+
+/* hover */
+.glitch-botonC:hover{
+  background: #d5d8d8;
+  color: black;
+
+  box-shadow:
+    0 0 10px #ffffff,
+    0 0 20px #c8c8c8;
+
+  animation: glitchBotonC 0.2s infinite;
+}
+
+/* animación (corregida nombre) */
+@keyframes glitchBotonC {
+  0%   { transform: translate(0); }
+  25%  { transform: translate(2px, -2px); }
+  50%  { transform: translate(-2px, 2px); }
+  75%  { transform: translate(2px, 2px); }
+  100% { transform: translate(0); }
+}
+
+.puerta2 {
+  display: block;
+  margin: 100px auto;
+  width: 250px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: contrast(1.2) hue-rotate(10deg);
+}
+
+.puerta2:hover {
+  transform: scale(1.1) rotateY(15deg);
+  filter: brightness(1.5);
+}
+.puerta2:active {
+  animation: puerta2Glitch 0.2s;
+}
+
+@keyframes puerta2Glitch {
+  0% { transform: translate(0); }
+  25% { transform: translate(5px, -5px); }
+  50% { transform: translate(-5px, 5px); }
+  75% { transform: translate(3px, -3px); }
+  100% { transform: translate(0); }
 }
