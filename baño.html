@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>baño</title>
+      <link rel="stylesheet" href="styles/style.css">
     <style>
         body{
             background-image: url("images/baño.jpg");
@@ -16,11 +17,7 @@
         }
     </style>
 
-    <a href="backrooms.html">
-  <img src="images/puerta2.png" alt="puerta2" class="puerta2">
-  <audio id="hoverSound" src="ruido.mp3" preload="auto"></audio>
-  <a href="backrooms.html">
-  <img src="puertabaño.png" class="puerta" id="puerta">
+   
   <script>
 const puerta2 = document.getElementById("puerta2");
 const sonido = document.getElementById("hoverSound");
@@ -37,6 +34,19 @@ puerta2.addEventListener("mouseenter", () => {
 
 </head>
 <body>
-    
+     <a href="backrooms.html">
+  <img src="images/puerta2.png" alt="puerta2" class="puerta2">
+  <audio id="hoverSound" src="ruido.mp3" preload="auto"></audio>
+  <a href="backrooms.html">
+  
+    <a href="index.html">
+  <button class="volver-btn">
+    volver al inicio
+  </button>
+
+  <audio id="bgm" loop autoplay>
+  <source src="images/musica final.mp3" type="audio/mpeg">
+</audio>
+</a>
 </body>
 </html>
